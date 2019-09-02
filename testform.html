@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>register Forms</h2>
+
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey" required>
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse" required>
+  <br><br>
+  mobile number: <br>
+  <input type="number" name= "mobile number" value=" mobile" required>
+ <br><br>
+
+ <input type="submit" value="Submit">
+
+</form> 
+<script>
+    document.addEventListener("submit", generate);
+  function generate(e) {
+        e.preventDefault();
+		var randomString = function(length) {
+			
+			var text = "";
+		
+			var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()_+";
+			
+			for(var i = 0; i < length; i++) {
+			
+				text += possible.charAt(Math.floor(Math.random() * possible.length));
+			
+			}
+			
+			return text;
+		}
+
+		// random string length
+        var random = randomString(10);
+        console.log(random);
+		
+		
+	};
+</script>
+
+
+</body>
+</html>
